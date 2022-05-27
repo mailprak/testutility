@@ -1,21 +1,25 @@
 package testpackage
 
+import (
+	"io/ioutil"
+	"log"
+)
+
 func AddIntNum(num1, num2 int) int {
-  return num1 + num2
+	return num1 + num2
 }
 
 func copyFile(srcName, targetName string) {
 
+	bytesRead, err := ioutil.ReadFile(srcName)
 
-    bytesRead, err := ioutil.ReadFile(srcName)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-    if err != nil {
-        log.Fatal(err)
-    }
+	err = ioutil.WriteFile(targetName, bytesRead, 0644)
 
-    err = ioutil.WriteFile(targetName, bytesRead, 0644)
-
-    if err != nil {
-        log.Fatal(err)
-    }
+	if err != nil {
+		log.Fatal(err)
+	}
 }
