@@ -9,7 +9,7 @@ func AddIntNum(num1, num2 int) int {
 	return num1 + num2
 }
 
-func copyFile(srcName, targetName string) {
+func CopyFile(srcName, targetName string) {
 
 	bytesRead, err := ioutil.ReadFile(srcName)
 
