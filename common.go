@@ -3,6 +3,7 @@ package testpackage
 import (
 	"io/ioutil"
 	"log"
+	"strings"
 )
 
 func AddIntNum(num1, num2 int) int {
@@ -22,4 +23,8 @@ func CopyFile(srcName, targetName string) {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func strCount(str,ch string) {
+	fmt.Println(strings.Count(str, ch))
 }
