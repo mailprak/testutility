@@ -26,6 +26,6 @@ func CopyFile(srcName, targetName string) {
 	}
 }
 
-func strCount(str,ch string) {
+func StrCount(str,ch string) {
 	fmt.Println(strings.Count(str, ch))
 }
